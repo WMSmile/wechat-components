@@ -1,0 +1,54 @@
+/* pages/record/record.wxss */
+
+.list_item {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: white;
+  margin: 20rpx;
+  border-radius: 5rpx;
+}
+
+.list_item_img {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 20rpx;
+  flex: 0 0 auto;
+}
+
+.list_item_info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20rpx;
+  /* background-color: violet; */
+}
+
+.list_item_info_title {
+  margin: 10rpx;
+  font-size: 36rpx;
+}
+
+.list_item_info_time {
+  margin: 10rpx;
+  color: red;
+  font-size: 26rpx;
+}
+
+.tips1 {
+  height: 120rpx;
+}
+
+
+.loading_c {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+
+.load_img {
+  width: 50rpx;
+  height: 50rpx;
+}

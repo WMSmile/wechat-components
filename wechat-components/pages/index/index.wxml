@@ -1,0 +1,37 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+
+   <!-- 轮播 -->
+   <swiper class="header_swiper" indicator-dots="true" previous-margin="31rpx" next-margin="107rpx">
+    <block wx:for="{{swiperitems}}" wx:key="item">
+      <swiper-item>
+        <navigator url="{{item.url}}" catchtap='{{item.tap}}'>
+          <view class="wm_flex_dir_top wm_flex_cross_center header_swiper_item">
+            <image class='header_swiper_image' src='{{item.icon}}'></image>
+          </view>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 九宫格 -->
+  <view class=" wm_flex_cross_center wm_flex_main_justify wm_grid">
+
+    <block wx:for="{{menuitems}}" wx:key="item">
+
+      <view class="wm_grid_item">
+        <navigator url="{{item.url}}" catchtap='{{item.tap}}' >
+          <view class="wm_flex_dir_top wm_flex_cross_center">
+            <image class='wm_grid_item_image' src='{{item.icon}}'></image>
+            <text class="wm_grid_item_text">{{item.text}}</text>
+          </view>
+      </navigator>
+    </view>
+    </block>
+
+  </view>
+
+
+
+
+</view>

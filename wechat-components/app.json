@@ -1,0 +1,66 @@
+{
+  "pages":[
+
+    "pages/index/index",
+    "pages/record/record",
+    "pages/chart/chart",
+    "pages/home/home",
+    "pages/message/message",
+
+    "pages/list_refresh/index",
+    "pages/list_refresh_a/index",
+
+    "pages/mine/index",
+
+    "pages/logs/logs"
+
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "基本控件运用",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#515151",
+    "selectedColor": "#DAA520",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tabbar/home.png",
+        "selectedIconPath": "/images/tabbar/home_selected.png"
+      },
+      {
+        "pagePath": "pages/chart/chart",
+        "text": "图表",
+        "iconPath": "/images/tabbar/chart.png",
+        "selectedIconPath": "/images/tabbar/chart-select.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "记账",
+        "iconPath": "/images/tabbar/post.png",
+        "selectedIconPath": "/images/tabbar/post-select.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "/images/tabbar/message.png",
+        "selectedIconPath": "/images/tabbar/message-select.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "/images/tabbar/mine.png",
+        "selectedIconPath": "/images/tabbar/mine_selected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

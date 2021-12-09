@@ -1,0 +1,28 @@
+<!--pages/record/record.wxml-->
+
+<view class="container">
+  <scroll-view scroll-y="true" style="height:{{scrollHeight}}px; width: 100%;" bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+    <view wx:if="{{hasRefesh}}" class="loading_c">
+      <image class="load_img" src="../../img/loading.png"></image>
+      <text>刷新中...</text>
+    </view>
+    <view wx:else style="display:none"><text>没有更多内容了</text></view>
+    <view class="list_item" wx:for="{{list}}" wx:for-item="item" bindtap="bindViewTap" data-title="{{item.title}}">
+      <image class="list_item_img" src="{{item.image}}"></image>
+      <view class="list_item_info">
+        <view class="list_item_info_title"> 标题:{{item.title}}</view>
+        <view class="list_item_info_time"> 发布时间:{{item.passtime}}</view>
+
+      </view>
+    </view>
+    <view class="tips1">
+      <view wx:if="{{hasMore}}" class="loading_c">
+        <image class="load_img" src="../../images/list_refresh/loading.png"></image>
+        <text>玩命的加载中...</text>
+      </view>
+      <view wx:else><text>没有更多内容了</text></view>
+    </view>
+  </scroll-view>
+
+
+</view>

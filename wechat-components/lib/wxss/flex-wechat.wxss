@@ -1,0 +1,251 @@
+
+/*flex-box*/
+
+/*[data-flex]*/
+.wm_flex,.wm_flex_dir_left,.wm_flex_dir_right,.wm_flex_dir_top,.wm_flex_dir_bottom,.wm_flex_main_left,.wm_flex_main_right,.wm_flex_main_justify,.wm_flex_main_center,.wm_flex_cross_top,.wm_flex_cross_bottom,.wm_flex_cross_center,.wm_flex_cross_baseline,.wm_flex_cross_stretch{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex
+}
+.wm_flex_dir_left{
+	-webkit-box-orient:horizontal;
+	-webkit-box-direction:normal;
+	-webkit-flex-direction:row;
+	-ms-flex-direction:row;
+	flex-direction:row;
+}
+.wm_flex_dir_right{
+	-webkit-box-orient:horizontal;
+	-webkit-box-direction:reverse;
+	-webkit-flex-direction:row-reverse;
+	-ms-flex-direction:row-reverse;
+	-webkit-box-pack:end;
+	flex-direction:row-reverse;
+}
+.wm_flex_dir_top{
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	-webkit-flex-direction:column;
+	-ms-flex-direction:column;
+	flex-direction:column;
+}
+.wm_flex_dir_bottom{
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:reverse;
+	-webkit-flex-direction:column-reverse;
+	-ms-flex-direction:column-reverse;
+	flex-direction:column-reverse;
+	-webkit-box-pack:end;
+}
+
+.wm_flex_main_left{
+	-webkit-box-pack:start;
+	-webkit-justify-content:flex-start;
+	-ms-flex-pack:start;
+	justify-content:flex-start;
+}
+.wm_flex_main_right{
+	-webkit-box-pack:end;
+	-webkit-justify-content:flex-end;
+	-ms-flex-pack:end;
+	justify-content:flex-end;
+}
+.wm_flex_main_justify{
+	-webkit-box-pack:justify;
+	-webkit-justify-content:space-between;
+	-ms-flex-pack:justify;
+	justify-content:space-between
+}
+.wm_flex_main_center{
+	-webkit-box-pack:center;
+	-webkit-justify-content:center;
+	-ms-flex-pack:center;
+	justify-content:center;
+}
+.wm_flex_cross_top{
+	-webkit-box-align:start;
+	-webkit-align-items:flex-start;
+	-ms-flex-align:start;
+	align-items:flex-start
+}
+.wm_flex_cross_bottom{
+	-webkit-box-align:end;
+	-webkit-align-items:flex-end;
+	-ms-flex-align:end;
+	align-items:flex-end
+}
+.wm_flex_cross_center{
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	-ms-flex-align:center;
+	align-items:center;
+}
+.wm_flex_cross_baseline{
+	-webkit-box-align:baseline;
+	-webkit-align-items:baseline;
+	-ms-flex-align:baseline;
+	align-items:baseline;
+}
+.wm_flex_cross_stretch{
+	-webkit-box-align:stretch;
+	-webkit-align-items:stretch;
+	-ms-flex-align:stretch;
+	align-items:stretch;
+}
+
+
+/*flex-box >* */
+
+.wm_flex_child_width_fixed{
+	width:0;/*不分配预留空间*/
+	height:auto;
+	-webkit-box-flex:1;
+	-webkit-flex-grow:1;
+	-ms-flex-positive:1;
+	flex-grow:1;
+	-webkit-flex-shrink:1;
+	-ms-flex-negative:1;
+	flex-shrink:1
+}
+.wm_flex_child_width_auto{
+	width:auto;/*分配预留宽度*/
+	-webkit-box-flex:0;
+	-webkit-flex-grow:0;
+	-ms-flex-positive:0;
+	flex-grow:0;
+	-webkit-flex-shrink:0;
+	-ms-flex-negative:0;
+	flex-shrink:0
+}
+.wm_flex_child_height_fixed
+{
+	width:auto;
+	height:0;/*不分配预留盖度*/
+	-webkit-box-flex:1;
+	-webkit-flex-grow:1;
+	-ms-flex-positive:1;
+	flex-grow:1;
+	-webkit-flex-shrink:1;
+	-ms-flex-negative:1;
+	flex-shrink:1;
+}
+.wm_flex_child_height_auto{
+	height:auto;/*分配预留宽度*/
+	-webkit-box-flex:0;
+	-webkit-flex-grow:0;
+	-ms-flex-positive:0;
+	flex-grow:0;
+	-webkit-flex-shrink:0;
+	-ms-flex-negative:0;
+	flex-shrink:0
+}
+.wm_flex_child_0{
+	-webkit-box-flex:0;
+	-webkit-flex-grow:0;
+	-ms-flex-positive:0;
+	flex-grow:0;
+	-webkit-flex-shrink:0;
+	-ms-flex-negative:0;
+	flex-shrink:0;
+}
+.wm_flex_child_1{
+	-webkit-box-flex:1;
+	-webkit-flex-grow:1;
+	-ms-flex-positive:1;
+	flex-grow:1;
+	-webkit-flex-shrink:1;
+	-ms-flex-negative:1;
+	flex-shrink:1
+}
+.wm_flex_child_2{
+	-webkit-box-flex:2;
+	-webkit-flex-grow:2;
+	-ms-flex-positive:2;
+	flex-grow:2;
+	-webkit-flex-shrink:2;
+	-ms-flex-negative:2;
+	flex-shrink:2
+}
+.wm_flex_child_3{
+	-webkit-box-flex:3;
+	-webkit-flex-grow:3;
+	-ms-flex-positive:3;
+	flex-grow:3;
+	-webkit-flex-shrink:3;
+	-ms-flex-negative:3;
+	flex-shrink:3
+}
+.wm_flex_child_4{
+	-webkit-box-flex:4;
+	-webkit-flex-grow:4;
+	-ms-flex-positive:4;
+	flex-grow:4;
+	-webkit-flex-shrink:4;
+	-ms-flex-negative:4;
+	flex-shrink:4;
+}
+.wm_flex_child_5{
+	-webkit-box-flex:5;
+	-webkit-flex-grow:5;
+	-ms-flex-positive:5;
+	flex-grow:5;
+	-webkit-flex-shrink:5;
+	-ms-flex-negative:5;
+	flex-shrink:5
+}
+.wm_flex_child_6{
+	-webkit-box-flex:6;
+	-webkit-flex-grow:6;
+	-ms-flex-positive:6;
+	flex-grow:6;
+	-webkit-flex-shrink:6;
+	-ms-flex-negative:6;
+	flex-shrink:6;
+}
+.wm_flex_child_7{
+	-webkit-box-flex:7;
+	-webkit-flex-grow:7;
+	-ms-flex-positive:7;
+	flex-grow:7;
+	-webkit-flex-shrink:7;
+	-ms-flex-negative:7;
+	flex-shrink:7
+}
+/*[data-flex-box="8"] */
+.wm_flex_child_8{
+	-webkit-box-flex:8;
+	-webkit-flex-grow:8;
+	-ms-flex-positive:8;
+	flex-grow:8;
+	-webkit-flex-shrink:8;
+	-ms-flex-negative:8;
+	flex-shrink:8;
+}
+.wm_flex_child_9{
+	-webkit-box-flex:9;
+	-webkit-flex-grow:9;
+	-ms-flex-positive:9;
+	flex-grow:9;
+	-webkit-flex-shrink:9;
+	-ms-flex-negative:9;
+	flex-shrink:9
+}
+.wm_flex_child_10{
+	-webkit-box-flex:10;
+	-webkit-flex-grow:10;
+	-ms-flex-positive:10;
+	flex-grow:10;
+	-webkit-flex-shrink:10;
+	-ms-flex-negative:10;
+	flex-shrink:10;
+}
+
+
+/* 颜色 */
+
+.wm_bg_white{
+	background-color: white;
+
+}
+
