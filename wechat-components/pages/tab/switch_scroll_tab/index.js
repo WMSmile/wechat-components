@@ -10,13 +10,108 @@ Page({
     winHeight: "", //窗口高度
     currentTab: 0, //预设当前项的值
     scrollLeft: 0, //tab标题的滚动条位置
-    expertList: [{ //假数据
-      img: "avatar.png",
-      name: "欢顔",
-      tag: "知名情感博主",
-      answer: 134,
-      listen: 2234
-    }]
+    tabList: [{
+        id: 0,
+        title: "全部"
+      },
+      {
+        id: 1,
+        title: "健康"
+      },
+      {
+        id: 2,
+        title: "情感"
+      },
+      {
+        id: 3,
+        title: "职场"
+      },
+      {
+        id: 4,
+        title: "育儿"
+      },
+      {
+        id: 5,
+        title: "纠纷"
+      },
+      {
+        id: 6,
+        title: "青春"
+      },
+      {
+        id: 7,
+        title: "养生"
+      },
+      {
+        id: 8,
+        title: "其他"
+      },
+    ],
+    //假数据
+    expertList: [{
+        img: "avatar.png",
+        name: "欢顔",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      },
+      {
+        img: "avatar.png",
+        name: "欢顔",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      },
+      {
+        img: "avatar.png",
+        name: "欢顔",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      },
+      {
+        img: "avatar.png",
+        name: "欢顔",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      },
+      {
+        img: "avatar.png",
+        name: "欢顔",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      },
+      {
+        img: "avatar.png",
+        name: "欢顔",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      },
+      {
+        img: "avatar.png",
+        name: "欢顔",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      },
+      {
+        img: "avatar.png",
+        name: "欢顔",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      },
+      {
+        img: "avatar.png",
+        name: "欢顔",
+        tag: "知名情感博主",
+        answer: 134,
+        listen: 2234
+      },
+    ]
 
   },
 
