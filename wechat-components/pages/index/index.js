@@ -18,6 +18,8 @@ Page({
       { text: '下拉刷新2', hint: '自定义下拉刷新2', url: '../list_refresh_a/index', icon: '../../images/home/home-test.png', tips: '', tap: '' },
       { text: '瀑布流', hint: '瀑布流布局', url: '../flow/index/index', icon: '../../images/home/home-test.png', tips: '', tap: '' },
       { text: 'flex瀑布流', hint: 'flex瀑布流布局', url: '../flow/flex/index', icon: '../../images/home/home-test.png', tips: '', tap: '' },
+      { text: '选项卡', hint: '选项卡', url: '../tab/switch_tab/index', icon: '../../images/home/home-test.png', tips: '', tap: '' },
+      { text: '滑动选项卡', hint: '滑动选项卡', url: '../tab/switch_scroll_tab/index', icon: '../../images/home/home-test.png', tips: '', tap: '' },
       { text: '文字语音转换', hint: '语音转文字、文字转语音', url: '../error/update', icon: '../../images/home/home-test.png', tips: '', tap: '' },
       { text: '图片转换', hint: '图片转ASCII字符图片', url: '../error/update', icon: '../../images/home/home-test.png', tips: '', tap: '' },
       { text: '聊天机器人', hint: '聊天机器人陪聊', url: '../imRobot/chat', icon: '../../images/home/home-test.png', tips: '', tap: '' }
