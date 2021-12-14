@@ -14,6 +14,9 @@
     "pages/flow/index/index",
     "pages/flow/detail/index",
     "pages/flow/flex/index",
+    
+    "pages/tab/switch_tab/index",
+    "pages/tab/switch_scroll_tab/index",
 
     "pages/mine/index",
 
