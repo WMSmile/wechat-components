@@ -16,6 +16,8 @@ Page({
       // text标题，hint介绍，url跳转页面，icon图标，tips备注，tap点击事件(与url二选一)
       { text: '下拉刷新', hint: '自定义下拉刷新', url: '../list_refresh/index', icon: '../../images/home/home-test.png', tips: '', tap: '' },
       { text: '下拉刷新2', hint: '自定义下拉刷新2', url: '../list_refresh_a/index', icon: '../../images/home/home-test.png', tips: '', tap: '' },
+      { text: '瀑布流', hint: '瀑布流布局', url: '../flow/index/index', icon: '../../images/home/home-test.png', tips: '', tap: '' },
+      { text: 'flex瀑布流', hint: 'flex瀑布流布局', url: '../flow/flex/index', icon: '../../images/home/home-test.png', tips: '', tap: '' },
       { text: '文字语音转换', hint: '语音转文字、文字转语音', url: '../error/update', icon: '../../images/home/home-test.png', tips: '', tap: '' },
       { text: '图片转换', hint: '图片转ASCII字符图片', url: '../error/update', icon: '../../images/home/home-test.png', tips: '', tap: '' },
       { text: '聊天机器人', hint: '聊天机器人陪聊', url: '../imRobot/chat', icon: '../../images/home/home-test.png', tips: '', tap: '' }

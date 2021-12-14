@@ -10,6 +10,11 @@
     "pages/list_refresh/index",
     "pages/list_refresh_a/index",
 
+
+    "pages/flow/index/index",
+    "pages/flow/detail/index",
+    "pages/flow/flex/index",
+
     "pages/mine/index",
 
     "pages/logs/logs"
