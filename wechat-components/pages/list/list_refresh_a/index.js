@@ -1,8 +1,8 @@
 // pages/record/record.js
 
-var network_util = require('../../utils/network_util.js');
-var json_util = require('../../utils/json_util.js');
-var md5 = require('../../utils/md5.js');
+var network_util = require('../../../utils/network_util.js');
+var json_util = require('../../../utils/json_util.js');
+var md5 = require('../../../utils/md5.js');
 var that;
 Page({
 

@@ -7,9 +7,10 @@
     "pages/home/home",
     "pages/message/message",
 
-    "pages/list_refresh/index",
-    "pages/list_refresh_a/index",
-
+    "pages/list/list_refresh/index",
+    "pages/list/list_refresh_a/index",
+    "pages/list/list_refresh_b/index",
+    
 
     "pages/flow/index/index",
     "pages/flow/detail/index",

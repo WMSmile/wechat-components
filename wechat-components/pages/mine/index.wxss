@@ -1,1 +1,95 @@
 /* pages/record/record.wxss */
+.box{
+  position: relative;
+  padding:0rpx !important;
+}
+.bg {
+  width: 100%;
+  height: 280rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #449f45;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.user {
+  background-color: #fff;
+  width: calc(100% - 40rpx);
+  height: 200rpx;
+  z-index: 1;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 20rpx;
+  top: 100rpx;
+}
+
+.user-item{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #DFDFDF;
+}
+.static{
+width: 100%;
+height: 200rpx;
+background-color: #fff;
+display: flex;
+justify-content:space-around;
+align-items: center;
+}
+.static-item{
+  text-align: center;
+}
+.function{
+  background-color: #fff;
+  width: calc(100% - 40rpx);
+ 
+  z-index: 1;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 20rpx;
+  top: 520rpx;
+}
+.fun-item{
+  padding: 20rpx;
+  border-bottom: 1px solid #DFDFDF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fun-item image{
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+}
+.fun-item:last-child{
+  border-bottom: none;
+}
+.icon{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 1rpx solid #DFDFDF;
+  margin:0 40rpx 0 40rpx;
+  flex: 0 0 auto;
+}
+.userHead{
+  width: 100%;
+  height: 100%;
+}
+.title{
+  line-height: 60rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-left: 20rpx;
+}
+.user_info{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}

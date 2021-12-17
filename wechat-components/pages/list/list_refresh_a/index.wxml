@@ -3,7 +3,7 @@
 <view class="container">
   <scroll-view scroll-y="true" style="height:{{scrollHeight}}px; width: 100%;" bindscrolltolower="loadMore" bindscrolltoupper="refesh">
     <view wx:if="{{hasRefesh}}" class="loading_c">
-      <image class="load_img" src="../../img/loading.png"></image>
+      <image class="load_img" src="../../../images/list_refresh/loading.png"></image>
       <text>刷新中...</text>
     </view>
     <view wx:else style="display:none"><text>没有更多内容了</text></view>
@@ -17,12 +17,10 @@
     </view>
     <view class="tips1">
       <view wx:if="{{hasMore}}" class="loading_c">
-        <image class="load_img" src="../../images/list_refresh/loading.png"></image>
+        <image class="load_img" src="../../../images/list_refresh/loading.png"></image>
         <text>玩命的加载中...</text>
       </view>
       <view wx:else><text>没有更多内容了</text></view>
     </view>
   </scroll-view>
-
-
 </view>

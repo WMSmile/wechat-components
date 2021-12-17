@@ -1,2 +1,9 @@
 <!--pages/chart/chart.wxml-->
-<text>pages/chart/chart.wxml</text>
+<view class="container">
+  
+<text selectable="true">可以参考 echarts-for-weixin</text>
+<text selectable="true">作者很懒，不想展示了，自己去看哦！</text>
+<text selectable="true">github地址：</text>
+<text selectable="true">https://github.com/ecomfe/echarts-for-weixin</text>
+
+</view>

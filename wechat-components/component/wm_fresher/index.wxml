@@ -1,0 +1,18 @@
+<wxs module="touch" src="./touch.wxs"></wxs>
+<view class="arefresher" change:trackData="{{touch.trackDataObserver}}" trackData="{{trackData}}">
+  <view class="refresher-upper">
+    <view class="upper-content">
+      <text class="upper-icon {{refreshing ? 'loading-icon' : 'arrow-down-icon'}}"></text>
+      <text class="text">{{upperText}}</text>
+    </view>
+  </view>
+  <scroll-view class="arefresher__track" style="height: {{refresherH}}px" bind:touchstart="{{touch.touchstart}}" catch:touchmove="{{touch.touchmove}}" bind:touchend="{{touch.touchend}}" bind:scroll="{{touch.onScroll}}" scroll-y="{{!refreshing}}">
+    <slot />
+    <view hidden="{{empty}}" class="refresher-lower">
+      <view class="lower-content">
+        <text wx:if="{{noMore}}" class="text">{{noMoreText}}</text>
+        <text wx:else class="loading-icon"></text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,6 @@
+<!--组件的xml-->
+
+<view>
+<text>{{title}}</text>
+<text>{{title}}</text>
+</view>

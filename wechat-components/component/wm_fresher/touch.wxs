@@ -1,0 +1,204 @@
+var MIN_DISTANCE = 10;
+var UPPER_HEIGHT = 60;
+var LOWER_HEIGHT = 60;
+var data = {
+	refresherH: 60,
+	upperDistance: 60,
+	lowerDistance: 30,
+
+	deltaX: 0,
+	deltaY: 0,
+	delta: 0,
+
+	offsetX: 0,
+	offsetY: 0,
+	offset: 0,
+
+	scrollTop: 0,
+
+	pulling: false,
+	refreshing: false,
+	laodingMore: false,
+	noMore: false,
+	direction: '',
+
+	loadMoreTime: 0,
+	touchStartTime: 0,
+	componentIns: null,
+	trackIns: null
+};
+
+function touchstart(e) {
+	if (data.refreshing) {
+		return;
+	}
+	correctPosition();
+	resetTouchStatus();
+	var touch = e.touches[0];
+	data.startX = touch.clientX;
+	data.startY = touch.clientY;
+	data.pulling = true;
+
+	data.touchStartTime = Date.now();
+	return true;
+}
+
+function touchmove(e) {
+	var touch = e.touches[0];
+	data.deltaX = touch.clientX - data.startX;
+	data.deltaY = touch.clientY - data.startY;
+	data.offsetX = Math.abs(data.deltaX);
+	data.offsetY = Math.abs(data.deltaY);
+	data.direction = data.direction || getDirection(data.offsetX, data.offsetY);
+
+	var refreshing = data.refreshing;
+
+	if (refreshing) {
+		return;
+	}
+	var delta = data.deltaY;
+	if (isCorrectDirection() && delta > 0 && data.scrollTop < 10) {
+		move(delta, false);
+	}
+	return true;
+}
+
+function touchend() {
+	var refreshing = data.refreshing;
+	var upperDistance = data.upperDistance;
+	if (refreshing || data.scrollTop > 10) {
+		return;
+	}
+
+	data.pulling = false;
+	var delta = data.deltaY;
+	var duration = Date.now() - data.touchStartTime;
+	var speed = delta / duration;
+	var shouldRefresh = Math.abs(speed) < 1 && delta > upperDistance;
+	if (shouldRefresh && isCorrectDirection()) {
+		move(UPPER_HEIGHT, true);
+	} else if (delta) {
+		move(0, false);
+	}
+	return true;
+}
+
+function onScroll(e) {
+	var scrollTop = e.detail.scrollTop;
+	var scrollHeight = e.detail.scrollHeight;
+	var lowerDistance = data.lowerDistance;
+	var refresherH = data.refresherH;
+	var noMore = data.noMore;
+	var loadingMore = data.loadingMore;
+	var shouldLoadMore =
+		LOWER_HEIGHT + scrollTop + refresherH + lowerDistance >= scrollHeight && Date.now() - data.loadMoreTime > 500;
+	data.scrollTop = scrollTop;
+	if (shouldLoadMore && !loadingMore && !noMore) {
+		data.loadMoreTime = Date.now();
+		data.loadingMore = true;
+		data.componentIns.triggerEvent('loadMore');
+	}
+}
+
+function move(offset = 0, refreshing) {
+	updateTrackStyle(offset);
+	if (refreshing) {
+		data.refreshing = true;
+		data.noMore = false;
+		data.upperIconIns.setStyle('');
+		data.componentIns.callMethod('onRefreshing');
+		data.componentIns.triggerEvent('refresh');
+	}
+}
+
+function isCorrectDirection() {
+	return data.direction === 'vertical';
+}
+
+function getDirection(x, y) {
+	if (x > y && x > MIN_DISTANCE) {
+		return 'horizontal';
+	}
+	if (y > x && y > MIN_DISTANCE) {
+		return 'vertical';
+	}
+	return '';
+}
+
+function correctPosition() {
+	data.pulling = false;
+	data.refreshing = false;
+	data.upperConIns.removeClass('hidden');
+	move(0, false);
+}
+
+function resetTouchStatus() {
+	data.direction = '';
+	data.deltaX = 0;
+	data.deltaY = 0;
+	data.offsetX = 0;
+	data.offsetY = 0;
+}
+
+function updateTrackStyle(offset) {
+	var translate3d = 'translate(0, ' + offset + 'px)';
+	var pulling = data.pulling;
+	var upperDistance = data.upperDistance;
+	var rotate = offset;
+	if (rotate > upperDistance) {
+		rotate = upperDistance;
+	}
+	rotate = rotate * (180 / upperDistance);
+	data.trackIns.setStyle({
+		'transition-duration': pulling ? '0ms' : '500ms',
+		transform: translate3d + ' translateZ(0px)'
+	});
+	data.upperIns.setStyle({
+		'transition-duration': pulling ? '0ms' : '500ms',
+		transform: translate3d + ' translateZ(0px)'
+	});
+	data.upperIconIns.setStyle({
+		'transition-duration': pulling ? '0ms' : '500ms',
+		transform: 'translateZ(0) rotate(-' + rotate + 'deg)'
+	});
+}
+
+function trackDataObserver(trackData, oldData, ins) {
+	if (!data.componentIns) {
+		data.componentIns = ins;
+		data.trackIns = ins.selectComponent('.arefresher__track');
+		data.upperIns = ins.selectComponent('.refresher-upper');
+		data.upperConIns = ins.selectComponent('.upper-content');
+		data.upperIconIns = ins.selectComponent('.upper-icon');
+	}
+	data.upperDistance = trackData.upperDistance;
+	data.lowerDistance = trackData.lowerDistance;
+	data.refresherH = trackData.refresherH;
+
+	var stopRefresh = trackData.operation.stopRefresh;
+	if (typeof stopRefresh === 'boolean') {
+		if (stopRefresh) {
+			resetTouchStatus();
+			correctPosition();
+			data.upperConIns.addClass('hidden');
+			data.componentIns.callMethod('resetNoMore', { noMore: data.noMore });
+		}
+	}
+	var stopLoadingMore = trackData.operation.stopLoadingMore;
+	if (typeof stopLoadingMore === 'boolean') {
+		data.loadingMore = false;
+	}
+	var setNoMore = trackData.operation.setNoMore;
+	if (typeof setNoMore === 'boolean') {
+		data.noMore = true;
+		data.componentIns.callMethod('resetNoMore', { noMore: true });
+	}
+}
+
+module.exports = {
+	touchstart: touchstart,
+	touchmove: touchmove,
+	touchend: touchend,
+	onScroll: onScroll,
+	trackDataObserver: trackDataObserver
+};

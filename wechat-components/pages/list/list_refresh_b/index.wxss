@@ -1,0 +1,5 @@
+/* pages/record/record.wxss */
+.fresher{
+  height: 100%;
+  width: 100%;
+}

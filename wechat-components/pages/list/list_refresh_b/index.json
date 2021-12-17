@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "wmfresher": "../../../component/wm_fresher/index"
+  }
+}

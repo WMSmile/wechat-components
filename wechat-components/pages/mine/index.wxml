@@ -1,4 +1,31 @@
 <!--pages/record/record.wxml-->
 <view class="container">
-
+  <!-- <image class="bg" src="../../../images/profile/bj@2x.png" alt="" /> -->
+  <view class="bg"></view>
+  <view class="user">
+    <view class="user-item">
+      <view class="icon" bindtap="clickInfo">
+        <image class="userHead" src="../../images/mine/profile.png"></image>
+      </view>
+      <view class="user_info">
+        <text>测试用户</text>
+        <text style="word-wrap:break-word;">13782518663</text>
+      </view>
+    </view>
+    <view class="static">
+      <block wx:for="{{headerList}}" wx:key="headerList" wx:for-item="item">
+        <view class="static-item">
+          <view>{{item.count}}</view>
+          <view>{{item.title}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="function">
+    <!-- 枚举map对象 -->
+    <view class="fun-item" bindtap="clickItem" wx:key="key" wx:if="{{value.isShow}}" wx:for="{{dataList}}" wx:for-index="cindex" data-path="{{value.path}}" data-order="{{value.order}}" wx:for-item="value">
+      <block> {{value.displayName}}</block>
+      <image src="../../images/mine/right.svg" alt="" />
+    </view>
+  </view>
 </view>

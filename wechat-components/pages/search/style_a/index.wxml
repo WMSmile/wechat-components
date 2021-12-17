@@ -1,0 +1,23 @@
+<!--pages/record/record.wxml-->
+
+<view class="container">
+
+  <view class="wm-search-bar">
+    <view class="wm-search-bar__form">
+      <!-- 最初始时的搜索框 -->
+      <view class="wm-search-bar__box">
+        <icon class="wm-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="wm-search-bar__input" placeholder="搜索" />
+      </view>
+      <!-- 可编辑时的搜索框 -->
+      <label class="wm-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="wm-icon-search" type="search" size="14"></icon>
+        <view class="wm-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <!-- 取消搜索 -->
+    <view class="wm-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+  </view>
+
+
+</view>

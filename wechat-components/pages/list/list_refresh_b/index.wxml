@@ -1,0 +1,6 @@
+<!--pages/record/record.wxml-->
+<view class="container">
+  <wmfresher class="fresher" id="arefresherid" bind:refresh="onRefresh" bind:loadMore="onLoadMore" empty="{{list.length < 1}}">
+    <view wx:for="{{list}}" wx:key="index" scroll-x style="width: 100%; overflow-x: scroll; height: 56px; background-color: {{item.color}};">{{index}}</view>
+  </wmfresher>
+</view>
