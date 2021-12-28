@@ -1,0 +1,118 @@
+page{
+  width: 100%;
+  background: #6b1010;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.bottom_btn{
+  position: fixed;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  bottom: 40rpx;
+  height: 90rpx;
+  width: 100%;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 90rpx;
+}
+.btn{
+  border-radius: 45rpx;
+  width: 600rpx;
+}
+.img-60{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+}
+.header{
+  position: relative;
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+  background-color: rgb(229, 149, 149);
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  padding-left: 20rpx;
+  font-size: 27rpx;
+  color: #fff;
+}
+.bg-time{
+  /* border: 1px solid #fff; */
+  position: absolute;
+  top: -10rpx;
+  left: 180rpx;
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  background: rgb(180, 84, 84);
+  text-align: center;
+  line-height: 80rpx;
+}
+.index{
+  width: 300px;
+  margin: 50rpx calc((100% - 300px) / 2);
+  border:1px solid #ffcccc;
+  border-radius: 50%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  font-size: 26rpx;
+}
+.xian{
+  width:300px;
+  height:1px;
+  background:#d6d6d6;
+  position:absolute;
+  top:150px;
+  left:0;
+}
+.index>.xian:nth-child(2){
+  transform:rotateZ(60deg)
+}
+.index>.xian:nth-child(3){
+  transform:rotateZ(120deg)
+}
+.detail{
+  position: absolute;
+  color: #fff;
+}
+.index>.detail:nth-child(4){
+  top:25px;left:132px;
+}
+.index>.detail:nth-child(5){
+  top:90px;left:225px;
+}
+.index>.detail:nth-child(6){
+  top:190px;left:225px;
+}
+.index>.detail:nth-child(7){
+  top:250px;left:132px;
+}
+.index>.detail:nth-child(8){
+  top:190px;left:40px;
+}
+.index>.detail:nth-child(9){
+  top:90px;left:40px;
+}
+.index>span{
+  width: 60px;
+  height: 60px;
+  background-color: #ffcccc;
+  border-radius: 50%;
+  position: absolute;
+  left: 120px;
+  top: 120px;
+}
+.index>span::after{
+  content: '';
+  width: 0;
+  height: 0;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-bottom: 26px solid #ffcccc;
+  z-index: 10;
+  position: absolute;
+  left: 20px;
+  top: -24px;
+}

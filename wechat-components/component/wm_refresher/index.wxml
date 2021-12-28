@@ -1,0 +1,34 @@
+<view style="height:{{contentHeight}}px;">
+
+  <!-- 下拉刷新 -->
+  <view class="refresh-block" style="height:{{refreshHeight}}rpx">
+    <image class="refreshing_image {{loading?'roate':(pull?'':'pull')}}" src="{{loading?'../../images/wmrefresher/icon_loading.png':'../../images/wmrefresher/icon_arrow.png'}}"></image>
+    <text class="refreshing_text">{{refreshing_text}}</text>
+  </view>
+
+  <!-- 滑动组件 top:{{refreshHeight}}rpx;bottom:{{loadMoreHeight}}rpx;  -->
+  <scroll-view class="scroll_container" scroll-y="true" style="height:{{contentHeight}}px;" bindscrolltolower="lower" bindscrolltoupper="upper" bindtouchstart="start" bindtouchend="end" bindtouchmove="move" enable-flex="true">
+
+
+
+    <slot></slot>
+
+    <!-- 底部加载完成 -->
+    <view wx:if="{{isLoadFinished}}" class="finish_footer">
+      <text>{{loadFinishStr}}</text>
+    </view>
+
+  </scroll-view>
+
+
+
+
+  <!-- 上拉加载 -->
+  <view class="loadMore-block" style="height:{{loadMoreHeight}}rpx">
+    <image class="loading_image {{loading?'roate':(pull?'pull':'')}}" src="{{loading?'../../images/wmrefresher/icon_loading.png':'../../images/wmrefresher/icon_arrow.png'}}"></image>
+    <text class="loading-text">{{loading_text}}</text>
+  </view>
+
+
+
+</view>

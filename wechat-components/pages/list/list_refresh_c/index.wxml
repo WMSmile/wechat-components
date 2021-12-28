@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+
+    <!-- 切换菜单 -->
+    <view class="t-menu">
+        <view class="t-menu-btn {{tabIndex ? '' : 'selected'}}" bindtap="changeTab" id="myTask">
+            <text>我的任务</text>
+        </view>
+        <view class="t-menu-btn {{tabIndex ? 'selected' : ''}}" bindtap="changeTab" id="hotTask">
+            <text>热门任务</text>
+        </view>
+    </view>
+    
+<!-- <view  style="height: {{windowHeight}}px; background-color: aqua;overflow: hidden;" > -->
+  <WMFresher id="refresher" class="wmfresher" content-height="{{windowHeight}}" load-finish-str="加载完成" bind:pullToRefresh="refresh" bind:pushToLoadMore="loadMore">
+    <block wx:for="{{words}}">
+      <view class="item-style">{{item}}</view>
+    </block>
+  </WMFresher>
+<!-- </view> -->
+<view style="height: 200px;"></view>
+
+</view>

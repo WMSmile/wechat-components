@@ -25,6 +25,8 @@
   margin-top: 17rpx;
   justify-content: flex-start;
 
+  margin-bottom: 250rpx;
+
 }
 
 .wm_grid_item{

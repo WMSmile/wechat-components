@@ -1,0 +1,80 @@
+<view class="container1">
+  <view class="news flex-row">
+    <image src="../../../images/lottery/draw_notice.png" class="img-35 notice-img"></image>
+    <swiper class="swiper" vertical="true" autoplay="true" circular="true" interval="2000"
+      display-multiple-items='1'>
+      <block wx:for-index="idx" wx:for='{{list}}' wx:key="index">
+        <swiper-item>
+          <view class='content-item'>
+            <text class="ml30" decode="{{true}}">恭喜用户&nbsp;&nbsp;&nbsp;</text>
+            <text class="high-light">{{item.phone}}</text>
+            <text decode="{{true}}">&nbsp;&nbsp;{{item.name}}</text>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="draw">
+    <view class="draw_view flex-row jb">
+      <view class="item {{prize[0].status ? 'op1' : ''}}">
+        <image src="{{prize[0].img}}" class="item-img"></image>
+        <view>{{prize[0].name}}</view>
+      </view>
+      <view class="item {{prize[1].status ? 'op1' : ''}}">
+        <image src="{{prize[1].img}}" class="item-img"></image>
+        <view>{{prize[1].name}}</view>
+      </view>
+      <view class="item {{prize[2].status ? 'op1' : ''}}">
+        <image src="{{prize[2].img}}" class="item-img"></image>
+        <view>{{prize[2].name}}</view>
+      </view>
+      <view class="item {{prize[3].status ? 'op1' : ''}}">
+        <image src="{{prize[3].img}}" class="item-img"></image>
+        <view>{{prize[3].name}}</view>
+      </view>
+      <view class="item no-bg">
+        <image wx:if="{{drawLuck}}" src="../../../images/lottery/chose.png" class="draw-img" bindtap="drawLuck"></image>
+        <image wx:else src="../../../images/lottery/chosed.png" class="draw-img" ></image>
+      </view>
+
+      <view class="item {{prize[4].status ? 'op1' : ''}}">
+        <image src="{{prize[4].img}}" class="item-img"></image>
+        <view>{{prize[4].name}}</view>
+      </view>
+      
+      <view class="item {{prize[5].status ? 'op1' : ''}}">
+        <image src="{{prize[5].img}}" class="item-img"></image>
+        <view>{{prize[5].name}}</view>
+      </view>
+      <view class="item {{prize[6].status ? 'op1' : ''}}">
+        <image src="{{prize[6].img}}" class="item-img"></image>
+        <view>{{prize[6].name}}</view>
+      </view>
+      <view class="item {{prize[7].status ? 'op1' : ''}}">
+        <image src="{{prize[7].img}}" class="item-img"></image>
+        <view>{{prize[7].name}}</view>
+      </view>
+      <!-- <block wx:for="{{prize}}" wx:key="index">
+        <view class="item">
+          <image src="{{item.img}}" class="item-img"></image>
+          <view>{{item.name}}</view>
+        </view>
+      </block> -->
+    </view>
+  </view>
+
+  <view class="choice">
+    您还有{{draw_time}}次抽奖机会
+  </view>
+</view>
+<view class="result">
+  <view class="result_title">我的抽奖记录</view>
+  <view class="result_info">
+    <scroll-view scroll-y="true" style="height: 200rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <block wx:for="{{resultList}}"  wx:key="index">
+        <view class="goods_name">{{item.name}}</view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

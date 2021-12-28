@@ -1,0 +1,119 @@
+page{
+  width: 100%;
+  background: #6b1010;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.container1{
+  border: 1px solid yellow;
+  margin: 20rpx;
+  border-radius: 20rpx;
+  color:#fff;
+  box-shadow: 0px 14px 4px 0 #ac9428;
+  /* height: 300px; */
+  padding: 30rpx;
+}
+.news{
+  margin: 20rpx auto;
+  width: 100%;
+  /* border: 1px solid black; */
+  height: 60rpx;
+  line-height:60rpx;
+  border-radius: 30rpx;
+  background-color: rgb(229, 149, 149);
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.notice-img{
+  margin: 15rpx 30rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.swiper{
+  font-size: 25rpx;
+  flex: 1 1 auto;
+}
+.content-item{
+  max-width: 600rpx;
+  overflow: hidden;    
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.high-light{
+  color: #eccb39;
+}
+.draw{
+  /* border: 1px solid black; */
+  margin-top: 50rpx;
+  width: 100%;
+  /* height: 350px; */
+  border-radius: 20rpx;
+  box-shadow:0 0 7rpx 0 rgba(0, 137, 254, 0.45), 0 0 18rpx 0 #FFFFFF;
+}
+.draw_view{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30rpx;
+  justify-content: space-between;
+}
+.item{
+  width: 30%;
+  /* border: 1px solid black; */
+  height: 90px;
+  margin-bottom: 30rpx;
+  /* margin-right: 10rpx; */
+  background-color: #fff;
+  color: #6b1010;
+  border-radius: 20rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+.item-img{
+  margin-top: 10rpx;
+  width: 60px;
+  height: 60px;
+  border-radius: 10rpx;
+}
+.choice{
+  margin-top: 30rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.draw-img{
+  height: 100%;
+  width: 100%;
+}
+.no-bg{
+  background: none;
+}
+.op1 {
+  border: 5rpx solid #d32828;
+  box-shadow: inset -4rpx -23rpx 20rpx 20rpx #ce1e1e;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+
+}
+.result{
+  /* border: 1px solid rebeccapurple; */
+  margin: 60rpx 20rpx ;
+  border-radius: 20rpx;
+  height: 200px;
+  box-shadow: 0 0 98rpx 0 #FFFFFF inset;
+  text-align: center;
+}
+.result_title{
+  color: #6b1010;
+  font-weight: 600;
+  padding-top: 30rpx;
+}
+.result_info{
+  /* border: 1px solid red; */
+  margin: 20rpx;
+  height:200rpx;
+}
+.goods_name{
+  color: #fff;
+  padding: 10rpx;
+  font-size: 28rpx;
+}

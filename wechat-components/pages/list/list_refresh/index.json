@@ -2,6 +2,6 @@
   "navigationBarTitleText":"下拉刷新",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "component-scroll": "../../component/component-scroll/index"
+    "component-scroll": "../../../component/component-scroll/index"
   }
 }

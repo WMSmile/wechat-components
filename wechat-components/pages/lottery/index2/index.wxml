@@ -1,0 +1,23 @@
+<!--pages/index2/index.wxml-->
+<view class="header">
+  <view>剩余抽奖次数</view>
+  <view class="bg-time">{{draw_time}}</view>
+</view>
+
+<view class="index">
+  <view class="xian"></view>
+  <view class="xian"></view>
+  <view class="xian"></view>
+  <view class="detail"> 一等奖</view>
+  <view class="detail">二等奖</view>
+  <view class="detail">三等奖</view>
+  <view class="detail">四等奖</view>
+  <view class="detail">五等奖</view>
+  <view class="detail">六等奖</view>
+  <span bindtap="zhuanin" style="transform:rotate({{trasn}}deg);"></span>
+</view>
+
+<view class="bottom_btn">
+  <button class="btn" catchtap="toAnother">去九宫格转盘</button>
+</view>
+

@@ -1,0 +1,40 @@
+/**index.wxss**/
+.item-style{  
+  padding: 30rpx;  
+  font-size: 40rpx;  
+  text-align: center;  
+  border-top: 2rpx solid #eee;  
+}  
+
+
+
+
+
+
+
+.t-menu{
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  height: 80rpx;
+  width: 100%;
+}
+.t-menu-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  font-size: 32rpx;
+}
+.selected{
+  color: #2fcc85;
+  border-bottom: 1px solid #2fcc85;
+}
+
+.wmfresher{
+  width: -webkit-fill-available;
+}

@@ -1,0 +1,132 @@
+.scroll_container {
+  /* z-index: 0; */
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+/*下拉刷新布局*/
+.refresh-block {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.08);
+  width: 100%;
+  height: 120rpx;
+  max-height: 200rpx;
+  text-align: center;
+  overflow: hidden;
+}
+
+.refreshing_image {
+  position: absolute;
+  left: 25%;
+  right: 0;
+  bottom: 15rpx;
+  text-align: center;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.refreshing_text {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 15rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+
+
+
+
+
+/*上拉加载更多布局*/
+.loadMore-block {
+  z-index: 1;
+  /* position: fixed; */
+  /* position: absolute; */
+  background-color: rgba(0, 0, 0, 0.08);
+  width: 100%;
+  height: 120rpx;
+  max-height: 200rpx;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.loading_image {
+  /* position: absolute; */
+  left: 20%;
+  right: 0;
+  top: 15rpx;
+  text-align: center;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.loading-text {
+  /* position: absolute; */
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 15rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.refresh-block .roate,
+.loadMore-block .roate {
+  -moz-animation: rotate 1s infinite linear;
+  -webkit-animation: rotate 1s infinite linear;
+  animation: rotate 1s infinite linear;
+}
+
+.refresh-block .pull,
+.loadMore-block .pull {
+  transform: rotate(180deg) scale(1) translate(0%, 0%);
+  transition: All 0.5s ease;
+}
+
+
+.finish_footer {
+  width: 100%;
+  height: 80rpx;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.08);
+}
