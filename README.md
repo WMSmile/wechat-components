@@ -12,6 +12,8 @@
 
 ![list](./screenshots/list.gif)
 
+![list_a](./screenshots/list_a.gif)
+
 ## 选项卡，头部导航
 
 ![tab](./screenshots/tab.gif)
@@ -19,6 +21,13 @@
 ## 聊天页面
 
 ![rebot](./screenshots/robot.jpg)
+
+
+## 大转盘抽奖和九宫格抽奖页面
+
+![dzp](./screenshots/dzp.png)
+
+![jgg](./screenshots/jgg.png)
 
 
 

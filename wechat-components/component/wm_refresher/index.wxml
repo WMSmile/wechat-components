@@ -1,4 +1,4 @@
-<view style="height:{{contentHeight}}px;">
+<view style="height:{{contentHeight}}px;position: relative;width: 100%;">
 
   <!-- 下拉刷新 -->
   <view class="refresh-block" style="height:{{refreshHeight}}rpx">
